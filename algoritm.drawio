@@ -44,6 +44,9 @@
                 <mxCell id="7" value="size arrayIn[i] &amp;lt;4" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="320" y="347" width="120" height="80" as="geometry"/>
                 </mxCell>
+                <mxCell id="52" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="16" target="51">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="16" value="arrayOut;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
                     <mxGeometry x="530" y="228.5" width="120" height="57" as="geometry"/>
                 </mxCell>
@@ -104,6 +107,9 @@
                 </mxCell>
                 <mxCell id="50" value="Блок-схема основной части: заполнение массива&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="486" y="20" width="254" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Конец" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="232.5" width="100" height="51.5" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
