@@ -2,28 +2,22 @@
 // длина которых меньше либо равна 3 символа. Первоначальный массив задан на старте выполнения алгоритма
 
 // подсчет размера выходного массива и создание его
-// заполнение нового массива -основная часть. блок-схема на нее
+// заполнение нового массива -основная часть. (блок-схема на нее)
 // вывод на экран 
 
 
-string[] arrayIn = {"Rom", "London", "Dom", "hole", "caverne", "si"};
-
-PrintArray(arrayIn);
-
-int sizeArrOut = SazeNewArray (arrayIn); 
-string[] arrayOut = new string[sizeArrOut];
-
-FillArray (arrayIn, arrayOut);
-PrintArray(arrayOut);
-
-void PrintArray (string[] arr) // вывод массива на экран
+string PrintArray (string[] arr) // вывод массива на экран
 {
     int i = 0;
     int size = arr.Length;
-    Console.Write("[");
+    string printArr = String.Empty;
+
+    printArr = "[";
     for (i = 0; i < size; i++)
-        Console.Write($"{arr[i]} ");
-    Console.WriteLine("]");
+        printArr += $"\"{arr[i]}\", ";
+    printArr += "]";
+
+    return printArr;
 }
 
 int SazeNewArray (string[] arr) // подсчет размера выходного массива
@@ -32,12 +26,12 @@ int SazeNewArray (string[] arr) // подсчет размера выходно�
     int count = 0;
     int size = arr.Length;
     for (i = 0; i < size; i++) 
-        if (arr[i].Length < 4) count++;
+        if (arr[i].Length <= 3) count++;
     return count;
 
 }
 
-string[] FillArray (string[] arrayIn, string[] arrayOut) // заполнение нового массива 
+string[] FillArray (string[] arrayIn, string[] arrayOut) // заполнение нового массива (по блок -схеме)
 {
     int arraySize = arrayIn.Length;
     int i = 0;
@@ -45,7 +39,7 @@ string[] FillArray (string[] arrayIn, string[] arrayOut) // заполнение
 
     while (i < arraySize)
     {
-        if (arrayIn[i].Length < 4)
+        if (arrayIn[i].Length <= 3)
         {
             arrayOut[j] = arrayIn[i];
             j++;
@@ -55,3 +49,14 @@ string[] FillArray (string[] arrayIn, string[] arrayOut) // заполнение
     return arrayOut;
 
 }
+
+string[] arrayInput = {"Rom", "cookies", "&*(00", "hole", "caverne", "si", "213"}; 
+
+Console.WriteLine(PrintArray(arrayInput));
+
+int sizeArrOut = SazeNewArray (arrayInput); 
+string[] arrayOutput = new string[sizeArrOut];
+
+arrayOutput = FillArray (arrayInput, arrayOutput);
+
+Console.WriteLine(PrintArray(arrayOutput));
